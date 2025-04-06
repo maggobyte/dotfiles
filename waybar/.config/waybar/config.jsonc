@@ -8,7 +8,7 @@
     "modules-left": ["hyprland/workspaces", "hyprland/mode", "hyprland/scratchpad", "custom/media"],
     "modules-center": ["hyprland/window"],
     //"modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "battery", "battery#bat5", "clock", "tray"],
-    "modules-right": ["mpd", "idle_inhibitor", "temperature","custom/gpu", "cpu", "memory","network", "pulseaudio", "backlight", "keyboard-state", "battery", "battery#bat2", "tray", "clock"],
+    "modules-right": ["mpd", "idle_inhibitor", "temperature","custom/gpu", "cpu", "memory","network", "pulseaudio", "backlight", "keyboard-state", "battery", "battery#bat2", "tray", "clock", "custom/wlogout"],
     // Modules configuration
     // "hyprland/workspaces": {
     //     "disable-scroll": true,
@@ -172,11 +172,13 @@
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
-    }
-    //"custom/gpu": {
-    // "exec": "/usr/bin/nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader",
-    //  "format": " {output}°C",
-    //  "interval": 5
+    },   
+    "custom/wlogout": {
+    "format": " ", // power icon (Font Awesome)
+    "tooltip": "Logout menu",
+    "on-click": "wlogout",
+    "interval": 999999 // static icon
+    },
     },
 }
 
