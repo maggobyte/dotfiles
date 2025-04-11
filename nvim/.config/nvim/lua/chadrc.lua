@@ -7,7 +7,6 @@ local M = {}
 
 M.base46 = {
 	theme = "catppuccin",
-  
   transparency = true
 
 
@@ -23,5 +22,7 @@ M.base46 = {
 --          lazyload = false
 --      }
 --}
+
+plugins = "plugins"
 
 return M
