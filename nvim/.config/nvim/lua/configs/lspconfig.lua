@@ -37,5 +37,5 @@ lspconfig.clangd.setup {
   on_attach = nvlsp.on_attach,
   on_init = nvlsp.on_init,
   capabilities = nvlsp.capabilities,
-  cmd = { "clangd", "--background-index", "--clang-tidy" }, -- optional
+  cmd = { "clangd", "--background-index", "--clang-tidy", "--compile-commands-dir=." }, -- optional
 }

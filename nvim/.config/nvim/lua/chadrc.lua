@@ -8,4 +8,6 @@ M.base46 = {
 
 plugins = "plugins"
 
+require "configs.autocmd"
+
 return M
