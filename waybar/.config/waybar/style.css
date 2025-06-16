@@ -24,6 +24,8 @@ window#waybar.hidden {
 }
 
 #workspaces {
+  background-color: rgba(0, 0, 0, 0.3);
+  /*Background on workspace numbers, not pretty yet :( */ 
 }
 
 #window {
@@ -51,6 +53,8 @@ button:hover {
 
 #workspaces button {
   padding: 0 4px;
+
+  color: #dddddd; /*A bit more visible */
   /*    background-color: rgba(0,0,0,0.3); */
 }
 
