@@ -184,6 +184,15 @@ label:focus {
   background-color: #eb4d4b;
 }
 
+#custom-gpu {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding-left: 4px;
+  padding-right: 4px;
+  margin: 2px;
+  /*border-radius: 6px; rounded corners*/
+  color: #ffffff;
+}
+
 /*
 
 window#waybar.solo {

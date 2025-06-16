@@ -179,7 +179,13 @@
     "on-click": "wlogout",
     "interval": 999999 // static icon
     },
-    },
+    "custom/gpu":{
+    "format": " {}°C",
+    "exec":"nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits",
+    "interval": 5,
+    "return-type": "text"
+    }
+    
 }
 
 
