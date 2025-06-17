@@ -193,6 +193,14 @@ label:focus {
   color: #ffffff;
 }
 
+#custom-wlogout {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding-left: 4px;
+  padding-right: 7px;
+  margin: 2px;
+  color: #ffffff;
+}
+
 /*
 
 window#waybar.solo {
