@@ -108,7 +108,7 @@
         "critical-threshold": 80,
         "format-critical": "{icon} {temperatureC}°C",
         "format": "{icon} {temperatureC}°C",
-        "format-icons": ["", "", ""]
+        "format-icons": ["", "", ""] //Can have different temp icons maybe
     },
     "backlight": {
         // "device": "acpi_video1",

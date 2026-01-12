@@ -3,19 +3,17 @@
 WALLPAPER_DIR="$HOME/Pictures/Wallpaper"
 
 # Get all monitor names
-MONITORS=($(hyprctl monitors | grep "Monitor" | awk '{print $2}'))
+mapfile -t MONITORS < <(hyprctl monitors | awk '/^Monitor/ {print $2}')
 
-# Get current wallpaper path (first loaded one)
-CURRENT_WALL=$(hyprctl hyprpaper listloaded | grep -oP '(?<=path: ).*' | head -n 1)
+# Get current wallpaper (first active one)
+CURRENT_WALL=$(hyprctl hyprpaper list | awk -F', ' 'NR==1 {print $2}')
 
-# Get a random wallpaper that's not the current one
-WALLPAPER=$(find "$WALLPAPER_DIR" -type f ! -name "$(basename "$CURRENT_WALL")" | shuf -n 1)
+# Pick a random wallpaper different from the current one
+WALLPAPER=$(find "$WALLPAPER_DIR" -type f \
+    ! -name "$(basename "$CURRENT_WALL")" | shuf -n 1)
 
-# Unload all current wallpapers - Causes flicker, but saves RAM
-hyprctl hyprpaper unload all
-
-# Preload and apply the same wallpaper to all monitors
-hyprctl hyprpaper preload "$WALLPAPER"
+# Apply wallpaper to all monitors (auto-loads now)
 for MON in "${MONITORS[@]}"; do
     hyprctl hyprpaper wallpaper "$MON,$WALLPAPER"
 done
+
