@@ -1,23 +1,23 @@
--- load defaults i.e lua_lsp
+-- load defaults i.e lua_ls
 require("nvchad.configs.lspconfig").defaults()
 
-local lspconfig = require "lspconfig"
-
--- EXAMPLE
-local servers = { "html", "cssls" }
 local nvlsp = require "nvchad.configs.lspconfig"
 
--- lsps with default config
-for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
+-- servers with default config
+local servers = { "html", "cssls" }
+
+for _, server in ipairs(servers) do
+  vim.lsp.config(server, {
     on_attach = nvlsp.on_attach,
     on_init = nvlsp.on_init,
     capabilities = nvlsp.capabilities,
-  }
+  })
+
+  vim.lsp.enable(server)
 end
 
--- configuring rust_analyzer
-lspconfig.rust_analyzer.setup {
+-- rust_analyzer
+vim.lsp.config("rust_analyzer", {
   on_attach = nvlsp.on_attach,
   on_init = nvlsp.on_init,
   capabilities = nvlsp.capabilities,
@@ -31,11 +31,21 @@ lspconfig.rust_analyzer.setup {
       },
     },
   },
-}
+})
 
-lspconfig.clangd.setup {
+vim.lsp.enable("rust_analyzer")
+
+-- clangd
+vim.lsp.config("clangd", {
   on_attach = nvlsp.on_attach,
   on_init = nvlsp.on_init,
   capabilities = nvlsp.capabilities,
-  cmd = { "clangd", "--background-index", "--clang-tidy", "--compile-commands-dir=." }, -- optional
-}
+  cmd = {
+    "clangd",
+    "--background-index",
+    "--clang-tidy",
+    "--compile-commands-dir=.",
+  },
+})
+
+vim.lsp.enable("clangd")
