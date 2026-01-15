@@ -13,3 +13,7 @@ cifs-utils for fstab
 ctrl + space + f
 
 Swaync
+
+qt5-wayland + qt6-wayland
+
+waypaper
