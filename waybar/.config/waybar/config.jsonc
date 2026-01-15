@@ -6,26 +6,8 @@
     //"spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "hyprland/mode", "hyprland/scratchpad", "custom/media"],
-    "modules-center": ["hyprland/window"],
-    //"modules-right": ["mpd", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "temperature", "backlight", "keyboard-state", "battery", "battery#bat5", "clock", "tray"],
-    "modules-right": ["mpd", "idle_inhibitor", "temperature","custom/gpu", "cpu", "memory","network", "pulseaudio", "backlight", "keyboard-state", "battery", "battery#bat2", "tray", "clock", "custom/wlogout"],
-    // Modules configuration
-    // "hyprland/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "warp-on-scroll": false,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+    "modules-center": ["clock"],
+    "modules-right": ["mpd", "temperature","custom/gpu", "cpu", "memory", "pulseaudio", "backlight", "keyboard-state", "battery", "battery#bat2", "network", "tray", "custom/wlogout"],
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -46,7 +28,6 @@
         "tooltip-format": "{app}: {title}"
     },
     "mpd": {
-//        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
         "format": "  {title} - {artist} {stateIcon} [{elapsedTime:%M:%S}/{totalTime:%M:%S}] {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}[{songPosition}/{queueLength}] [{volume}%]",
         "format-disconnected": " Disconnected",
         "format-stopped": " {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped",
@@ -76,13 +57,6 @@
         "on-scroll-up": "mpc volume +2",
         "on-scroll-down": "mpc volume -2"
 
-    },
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": " ",
-            "deactivated": " "
-        }
     },
     "tray": {
         // "icon-size": 21,
@@ -143,19 +117,13 @@
     },
     "pulseaudio": {
         "scroll-step": 5, // %, can be a float
-        "format": "{icon}   {volume}% {format_source}",
-        "format-bluetooth": " {icon} {volume}% {format_source}",
-        "format-bluetooth-muted": "  {icon} {format_source}",
-        "format-muted": "  {format_source}",
-        "format-source": " {volume}%",
-        "format-source-muted": "",
+        "format": "{icon} {volume}%",
+        "format-bluetooth": " {icon} {volume}%",
+        "format-bluetooth-muted": "  {icon}",
+        "format-muted": " ",
+        //"format-source": " {volume}%",
+        //"format-source-muted": "",
         "format-icons": {
-//            "headphone": "",
-//            "hands-free": "",
-//            "headset": "",
-//            "phone": "",
-//            "portable": "",
-//            "car": "",
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol",
@@ -170,11 +138,10 @@
             "default": "🎜"
         },
         "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" 
     },   
     "custom/wlogout": {
-    "format": "", // power icon (Font Awesome)
+    "format": " ", // power icon (Font Awesome)
     "tooltip": "Logout menu",
     "on-click": "wlogout",
     "interval": 999999 // static icon
@@ -187,5 +154,3 @@
     }
     
 }
-
-

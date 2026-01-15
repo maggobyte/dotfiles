@@ -8,3 +8,8 @@ tmux list all sessions ctrl + space + s, kill with x + y
 hyprshot
 
 Font for icons: otf-font-awesome
+cifs-utils for fstab
+
+ctrl + space + f
+
+Swaync
