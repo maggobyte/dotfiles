@@ -10,7 +10,7 @@
 }
 
 #waybar {
-  background: transparent; /* background: rgba(30, 30, 46, 0.8); 0.8 opacity matches Kitty */
+  background: rgba(30, 30, 46, 0.8); /* background: transparent; */
   color: #c6d0f5;
   margin: 2px 2px;
 }
