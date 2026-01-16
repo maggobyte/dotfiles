@@ -32,7 +32,7 @@
   color: #1e1e2e;
   background-color: #89b4fa;
   border-radius: 5px;
-  margin: 2px;
+ /* margin: 2px; */
 }
 
 #workspaces button:hover {
