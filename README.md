@@ -1,28 +1,61 @@
-stow -t ~
+# Dotfiles
 
-Dry-run = stow -n -v -t ~ hyprpaper
+### Stow
+Use stow to symlink .config files. CD into the dotfiles directory and excecute command targeting the chosen .config
+```bash
+stow -t ~ waybar
+```
 
-tmux sessionizer is ctrl + space + f
-tmux list all sessions ctrl + space + s, kill with x + y
+You can also dry-run stow to see changes before commiting:
 
-hyprshot
+```bash
+stow -n -v -t ~ hyprpaper
+```
 
-Font for icons: otf-font-awesome
-cifs-utils for fstab
+## Packages
 
-ctrl + space + f
+- swaync
+- qt5-wayland
+- qt6-wayland
+- hyprshot
+- nwg-look
+- btop
+- waypaper
+- hyprpolkitagent
+- cliphist
+- xdg-desktop-portal-hyprland
+- tmux
+- cifs-utils (for fstab)
+- hyprlock
+- kitty
+- nvim
+- starship
+- waybar
+- wlogout
+- wofi
+  
+### Scripts
 
-Swaync
+- tmux-sessionizer
 
-qt5-wayland + qt6-wayland
+### Fonts
 
-waypaper
+JetBrains Mono Nerd Font is the main font, otf-font-awesome is needed for icons on waybar.
 
-xdg-desktop-portal-hyprland hyprpolkitagent cliphist
+The color pallete that is mostly used is Catpuccin Mocha
 
-cliphist : 
-exec-once = wl-paste --type text --watch cliphist store # Stores only text data
-exec-once = wl-paste --type image --watch cliphist store # Stores only image data
-bind = SUPER, V, exec, cliphist list | wofi --dmenu --pre-display-cmd "echo '%s' | cut -f 2" | cliphist decode | wl-copy
+## Keybinds
 
-nwg-look (GTK3 Apps)
+### Tmux
+
+Shortcut for tmux sessionizer is "ctrl + space + f"
+
+Shortcut for listing all sessions is "ctrl + space + s", and kill sessions with x and y.
+
+### Hyprland
+
+Wofi (App launcher) = super + space
+
+Change wallpaper = super + o
+
+Screenshot (Area) = super + shitf + s
