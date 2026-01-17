@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-WALLPAPER_DIR="$HOME/Pictures/Wallpaper"
+WALLPAPER_DIR="/mnt/nas/magnus/Wallpapers"
+# $HOME/Pictures/Wallpapers
 
 # Get all monitor names
 mapfile -t MONITORS < <(hyprctl monitors | awk '/^Monitor/ {print $2}')
