@@ -51,13 +51,15 @@
 #memory,
 #temperature,
 #custom-gpu,
-#custom-wlogout {
+#custom-wlogout,
+#custom-notification{
   background-color: #101010;
   padding: 0.5rem 1rem;
   margin: 5px 0;
   border-radius: 0;
 }
 
+/*Start of box */
 #temperature {
   border-radius: 5px 0 0 5px;
   margin-left : 1rem;
@@ -74,6 +76,7 @@
 #memory {
   border-radius: 0 5px 5px 0;
 }
+/*End of box */
 
 #clock {
   color: #8caaee;
@@ -102,6 +105,7 @@
   border-radius: 0;
 }
 
+/*Start of box */
 #pulseaudio {
   color: #c6d0f5;
   border-radius: 5px 0px 0px 5px;
@@ -111,17 +115,11 @@
 #network {
   border-radius: 0 5px 5px 0;
 }
+/*End of box */
 
 #custom-music {
   color: #ca9ee6;
   border-radius: 5px;
-}
-
-#custom-wlogout {
-  margin-right: 1rem;
-  border-radius: 5px;
-  color: #e78284;
-  padding-left: 1.2rem;
 }
 
 #tray {
@@ -129,3 +127,23 @@
   margin-left: 1rem;
   border-radius: 5px;
 }
+
+/*Start of box */
+#custom-wlogout {
+  margin-right: 1rem;
+  border-radius: 0 5px 5px 0;
+  color: #e78284;
+  padding-left: 1.2rem;
+}
+
+#custom-notification {
+  color: #c6d0f5;
+  border-radius: 5px 0px 0px 5px;
+}
+
+#custom-notification.notification {
+  color: #e78284;
+}
+/*End of box */
+
+

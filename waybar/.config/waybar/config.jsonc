@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "hyprland/mode", "hyprland/scratchpad", "custom/media"],
     "modules-center": ["clock"],
-    "modules-right": ["mpd", "temperature","custom/gpu", "cpu", "memory", "pulseaudio", "backlight", "keyboard-state", "battery", "battery#bat2", "network", "tray", "custom/wlogout"],
+    "modules-right": ["mpd", "temperature","custom/gpu", "cpu", "memory", "pulseaudio", "backlight", "keyboard-state", "battery", "battery#bat2", "network", "tray", "custom/notification", "custom/wlogout"],
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -151,6 +151,16 @@
     "exec":"nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits",
     "interval": 5,
     "return-type": "text"
-    }
-    
+    },  
+    "custom/notification": {
+    "exec": "swaync-client -swb",
+    "return-type": "json",
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "",
+      "none": ""
+    },
+  "on-click": "swaync-client -t"
+}
+
 }
