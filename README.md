@@ -33,6 +33,8 @@ stow -n -v -t ~ hyprpaper
 - waybar
 - wlogout
 - wofi
+- bat
+- zsh
   
 ### Scripts
 
