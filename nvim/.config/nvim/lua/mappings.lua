@@ -1,15 +1,16 @@
 require "nvchad.mappings"
 
--- add yours here
-
 local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 
--- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
---
---
+vim.keymap.set("n", "E", "$", { noremap = true, silent = true })
+vim.keymap.set("n", "B", "^", { noremap = true, silent = true })
+
+vim.keymap.set({ "n", "v" }, "E", "$", { noremap = true, silent = true })
+vim.keymap.set({ "n", "v" }, "B", "^", { noremap = true, silent = true })
+
 -- Lazygit
 map("n", "<leader>gg", function()
   local Terminal = require("toggleterm.terminal").Terminal
