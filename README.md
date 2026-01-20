@@ -14,6 +14,7 @@ stow -n -v -t ~ hyprpaper
 
 ## Packages
 
+- hyprland
 - swaync
 - qt5-wayland
 - qt6-wayland
@@ -26,6 +27,7 @@ stow -n -v -t ~ hyprpaper
 - xdg-desktop-portal-hyprland
 - tmux
 - cifs-utils (for fstab)
+- nfs-utils
 - hyprlock
 - kitty
 - nvim
@@ -42,8 +44,7 @@ stow -n -v -t ~ hyprpaper
 
 ### Fonts
 
-JetBrains Mono Nerd Font is the main font, otf-font-awesome is needed for icons on waybar.
-
+JetBrains Mono Nerd Font, otf-font-awesome 
 The color pallete that is mostly used is Catpuccin Mocha
 
 ## Keybinds
