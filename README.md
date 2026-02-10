@@ -40,6 +40,8 @@ Some packages worth mentioning. There is no other reason.
 - wofi 
 - xdg-desktop-portal-hyprland 
 - zsh 
+- swww
+- waypaper
 
 ### Scripts
 

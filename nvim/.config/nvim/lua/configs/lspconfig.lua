@@ -1,5 +1,4 @@
 -- load defaults i.e lua_ls
-require("nvchad.configs.lspconfig").defaults()
 
 local nvlsp = require "nvchad.configs.lspconfig"
 
@@ -16,24 +15,6 @@ for _, server in ipairs(servers) do
   vim.lsp.enable(server)
 end
 
--- rust_analyzer
-vim.lsp.config("rust_analyzer", {
-  on_attach = nvlsp.on_attach,
-  on_init = nvlsp.on_init,
-  capabilities = nvlsp.capabilities,
-  settings = {
-    ["rust-analyzer"] = {
-      cargo = {
-        allFeatures = true,
-      },
-      checkOnSave = {
-        command = "clippy",
-      },
-    },
-  },
-})
-
-vim.lsp.enable("rust_analyzer")
 
 -- clangd
 vim.lsp.config("clangd", {
@@ -49,3 +30,9 @@ vim.lsp.config("clangd", {
 })
 
 vim.lsp.enable("clangd")
+
+vim.api.nvim_set_hl(0, "LspInlayHint", {
+  fg = "#7f849c",
+  bg = "NONE",
+  italic = true,
+})
