@@ -26,7 +26,22 @@ $time\
 [ ](fg:purple)\
 $line_break$character"""
 
-palette = 'catppuccin_mocha'
+palette = 'greyscale'
+
+[palettes.greyscale]
+text = "#e6e6e6"
+surface0 = "#2e2e2e"
+peach = "#ececec"
+green = "#c6c6c6"
+teal = "#a2a2a2"
+blue = "#7e7e7e"
+purple = "#5c5c5c"
+lavender = "#d4d4d4"
+red = "#ffffff"
+base = "#1c1c1c"
+mantle = "#161616"
+color_bg3 = "#7e7e7e"
+
 
 [palettes.gruvbox_dark]
 color_fg0 = '#fbf1c7'
@@ -69,7 +84,7 @@ mantle = "#181825"
 crust = "#11111b"
 
 [os]
-disabled = false
+disabled = true
 style = "bg:surface0 fg:text"
 
 [os.symbols]
@@ -169,7 +184,7 @@ format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
 [docker_context]
 symbol = ""
 style = "bg:mantle"
-format = '[[ $symbol( $context) ](fg:#83a598 bg:color_bg3)]($style)'
+format = '[[ $symbol( $context) ](fg:base bg:blue)]($style)'
 
 [time]
 disabled = false
@@ -184,7 +199,7 @@ disabled = false
 disabled = false
 success_symbol = '[](bold fg:green)'
 error_symbol = '[](bold fg:red)'
-vimcmd_symbol = '[](bold fg:creen)'
+vimcmd_symbol = '[](bold fg:green)'
 vimcmd_replace_one_symbol = '[](bold fg:purple)'
 vimcmd_replace_symbol = '[](bold fg:purple)'
 vimcmd_visual_symbol = '[](bold fg:lavender)'
